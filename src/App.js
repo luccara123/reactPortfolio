@@ -1,13 +1,14 @@
 import './App.css';
 import About from "./components/About";
 import Nav from "./components/Nav";
+import Header from "./components/Header";
 import React from "react";
 
 function App() {
   return (
     <div>
         <div>
-       <Nav></Nav>
+       <Header></Header>
     </div>
     <div>
       <About></About>
