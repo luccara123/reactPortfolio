@@ -1,4 +1,5 @@
 import React from 'react';
+import myPhoto from "../../images/myphoto.png"
 
 function About(){
     return(
@@ -10,12 +11,12 @@ function About(){
 
             <div className="half-container">
 
-                <div classNmae="main-photo-container">
-                    <img alt="my-photo"/>
+                <div className="main-photo-container">
+                <img src={myPhoto} alt="horse" />
                 </div>
 
-                <article classNmae="text-container">
-                    <p> My name is Lucca Araujo</p>
+                <article className="text-container">
+                    <p className="text-content"> My name is Lucca Araujo, I am 21 years old and I am passionate about coding. I am from Brazil and I live in Toronto since 2019. </p>
                 </article>
             </div>
         </section>

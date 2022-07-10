@@ -1,12 +1,21 @@
 import './App.css';
 import About from "./components/About";
-import Nav from "./components/Nav";
 import Header from "./components/Header";
 import React from "react";
+import bgImage from "./images/background.jpg"
+
+
 
 function App() {
   return (
-    <div>
+    <div 
+    className="bg_image"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          height: "100vh",
+          backgroundPosition: "center"
+        }}>
         <div>
        <Header></Header>
     </div>
