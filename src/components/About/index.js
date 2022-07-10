@@ -9,6 +9,8 @@ function About(){
                 <h2 className="section-title"> ABOUT ME </h2>
             </div>
 
+            <div className="line"></div>
+
             <div className="half-container">
 
                 <div className="main-photo-container">
