@@ -2,7 +2,7 @@ import React from "react";
 
 
 function Nav(props) {
-    const links = ["About", "Contact",];
+    const links = ["About", "Portfolio", "Contact"];
     return (
         <nav id="nav">
         <ul>

@@ -14,7 +14,7 @@ function About(){
             <div className="half-container">
 
                 <div className="main-photo-container">
-                <img src={myPhoto} alt="horse" />
+                <img src={myPhoto} alt="my photo" />
                 </div>
 
                 <article className="text-container">
