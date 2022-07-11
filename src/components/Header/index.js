@@ -3,6 +3,7 @@ import Nav from "../Nav";
 import About from "../About";
 import Contact from "../Contact";
 import Portfolio from "../Portfolio";
+import Resume from "../Resume";
 
 function Header() {
     const [currentSection,
@@ -15,6 +16,8 @@ function Header() {
           return <Contact />;
           case "Portfolio":
             return <Portfolio />;
+          case "Resume":
+            return <Resume />;
         default:
           return <About />;
       }
