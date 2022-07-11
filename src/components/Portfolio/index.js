@@ -19,7 +19,7 @@ function Portfolio(){
                {/* Porject-1*/}
                 <div className="projects-box">
                     <div className="img-box">
-                    <img src={project1} alt="horse" />
+                    <img src={project1} alt="project1" />
                     </div>
                 <h3> Weather Dashboard</h3>
                 <div className="linksBox">
@@ -31,7 +31,7 @@ function Portfolio(){
                 {/* Porject-2*/}
                 <div className="projects-box">
                 <div className="img-box">
-                    <img src={project2} alt="horse" />
+                    <img src={project2} alt="project2" />
                 </div>
                 <h3>TechBlog</h3>
                 <div className="linksBox">
@@ -43,7 +43,7 @@ function Portfolio(){
                 {/* Porject-3*/}
                 <div className="projects-box">
                 <div className="img-box">
-                    <img src={project3} alt="horse" />
+                    <img src={project3} alt="project3" />
                     </div>
                 <h3>Code Quiz Challange</h3>
                 <div className="linksBox">
@@ -55,7 +55,7 @@ function Portfolio(){
                 {/* Porject-4*/}
                 <div className="projects-box">
                 <div className="img-box">
-                    <img src={project4} alt="horse" />
+                    <img src={project4} alt="project4" />
                     </div>
                 <h3>Note Taker</h3>
                 <div className="linksBox">
@@ -67,7 +67,7 @@ function Portfolio(){
                 {/* Porject-5*/}
                 <div className="projects-box">
                 <div className="img-box">
-                    <img src={project5} alt="horse" />
+                    <img src={project5} alt="project5" />
                     </div>
                 <h3>Second Blind Date</h3>
                 <div className="linksBox">
@@ -79,7 +79,7 @@ function Portfolio(){
                 {/* Porject-6*/}
                 <div className="projects-box">
                 <div className="img-box">
-                    <img src={project6} alt="horse" />
+                    <img src={project6} alt="project6" />
                     </div>
                 <h3>Bootbank</h3>
                 <div className="linksBox">

@@ -8,7 +8,18 @@ Html, Css, Javascript and React.
 
 # Screenshot
 
+![image](https://user-images.githubusercontent.com/78193249/178166847-d286e945-be70-486f-a5a0-b0886f303175.png)
+
+# Installation
+
+In order to install this application, use the command git clone followed by the repo link, in the command-line.
+
+# Usage 
+
+Use the command npm start, to run the application.
+
 # Live Website
+
 
 # Contact me
 
