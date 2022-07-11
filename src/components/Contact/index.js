@@ -30,29 +30,30 @@ function Contact() {
     }
     return (
         <section id="contact">
-            <h1 data-testid="h1tag">Contact me</h1>
+            <h1 data-testid="h1tag" className="section-title">CONTACT ME</h1>
+            <div className="line"></div>
             <form id="contact-form" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
+                <div className="flex">
+                    <label htmlFor="name">Name</label>
                     <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
                 </div>
-                <div>
-                    <label htmlFor="email">Email address:</label>
+                <div className="flex">
+                    <label htmlFor="email">Email address</label>
                     <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
                 </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
+                <div className="flex">
+                    <label htmlFor="message">Message</label>
                     <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-                </div>
+                </div >
                 {errorMessage && (
                     <div>
                         <p className="error-text">{errorMessage}</p>
                     </div>
                 )}
-                <button type="submit" data-testid="submit-btn">Submit</button>
+                <button type="submit"  data-testid="submit-btn" className="flex">Submit</button>
             </form>
         </section>
     );
-}
+};
 
 export default Contact

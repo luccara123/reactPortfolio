@@ -101,3 +101,72 @@ header{
   color: #fff;
   padding: 20px;
  }
+
+ /*Contact Page*/
+ #contact{
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding-top: 70px;
+ }
+
+ #contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+
+ .flex{
+  display: flex;
+  flex-direction: column;
+ }
+
+ .flex label{
+   color:rgb(228, 216, 140);
+   padding: 10px;
+   font-size: 20px;;
+ }
+
+ #contact input{
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+ }
+ 
+ #contact textarea{
+  width: 500px;
+  height: 80px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+ }
+
+#contact button{
+  margin-top: 25px;
+  padding: 8px 50px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: rgb(194, 102, 200);
+  border: 1px rgb(194, 102, 200) solid;
+  border-radius: 15px;
+}
+
+#contact button:hover{
+  background-color:rgb(194, 102, 200);
+  color: #fff;
+}
+
+.error-text{
+  padding-top: 20px;
+  color:rgb(100, 28, 108);
+}
+
