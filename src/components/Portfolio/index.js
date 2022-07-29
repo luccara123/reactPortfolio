@@ -57,10 +57,10 @@ function Portfolio(){
                 <div className="img-box">
                     <img src={project4} alt="project4" />
                     </div>
-                <h3>Note Taker</h3>
+                <h3>SpaceJetters</h3>
                 <div className="linksBox">
-                    <a href="https://github.com/luccara123/Note-taker"> Github</a>
-                    <a href="https://note-taker-pro-master.herokuapp.com/"> Website</a>
+                    <a href="https://github.com/projectbootcamp3/Space-Jetters/"> Github</a>
+                    <a href="https://ancient-mountain-63451.herokuapp.com/"> Website</a>
                 </div>
                 </div>
 

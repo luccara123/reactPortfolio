@@ -14,7 +14,7 @@ function App() {
           height: "100vh",
           backgroundPosition: "center"
         }}>
-      <Header></Header>
+      <Header ></Header>
       <Footer></Footer>
         </div>
   );
