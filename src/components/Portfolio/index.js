@@ -55,7 +55,7 @@ function Portfolio(){
                 {/* Porject-4*/}
                 <div className="projects-box">
                 <div className="img-box">
-                    <img src={project4} alt="project4" />
+                    <img src={project4} alt="project4-" />
                     </div>
                 <h3>SpaceJetters</h3>
                 <div className="linksBox">
