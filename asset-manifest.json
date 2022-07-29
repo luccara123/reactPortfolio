@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/reactPortfolio/static/css/main.fe54e64a.css",
-    "main.js": "/reactPortfolio/static/js/main.c25e3e61.js",
+    "main.js": "/reactPortfolio/static/js/main.2b1cb23e.js",
     "static/js/787.510e8dec.chunk.js": "/reactPortfolio/static/js/787.510e8dec.chunk.js",
     "static/media/Lucca Resume.pdf": "/reactPortfolio/static/media/Lucca Resume.803a923008981c3ed77d.pdf",
     "static/media/background.jpg": "/reactPortfolio/static/media/background.c6fca3751f4dd770a1fd.jpg",
@@ -9,16 +9,16 @@
     "static/media/project-1.jpeg": "/reactPortfolio/static/media/project-1.ed3d182d954bca2d8264.jpeg",
     "static/media/project-6.jpeg": "/reactPortfolio/static/media/project-6.0883ba795609065d1c84.jpeg",
     "static/media/project-2.jpeg": "/reactPortfolio/static/media/project-2.51a59bbf14b237f504a5.jpeg",
+    "static/media/project-4.jpeg": "/reactPortfolio/static/media/project-4.f9c4d2f6eaae07fbd42a.jpeg",
     "static/media/project-5.jpeg": "/reactPortfolio/static/media/project-5.1180812e707ff7dbc6ca.jpeg",
     "static/media/project-3.jpeg": "/reactPortfolio/static/media/project-3.7ab86812c1327f7a27a5.jpeg",
-    "static/media/project-4.jpeg": "/reactPortfolio/static/media/project-4.d562713e78ca97fefce9.jpeg",
     "index.html": "/reactPortfolio/index.html",
     "main.fe54e64a.css.map": "/reactPortfolio/static/css/main.fe54e64a.css.map",
-    "main.c25e3e61.js.map": "/reactPortfolio/static/js/main.c25e3e61.js.map",
+    "main.2b1cb23e.js.map": "/reactPortfolio/static/js/main.2b1cb23e.js.map",
     "787.510e8dec.chunk.js.map": "/reactPortfolio/static/js/787.510e8dec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe54e64a.css",
-    "static/js/main.c25e3e61.js"
+    "static/js/main.2b1cb23e.js"
   ]
 }
