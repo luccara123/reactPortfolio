@@ -7,7 +7,7 @@ const SideBarLinks = ({ closeSideBar }) => {
         <div className="header-subcontainer hide">
         <nav className="burger-nav" >
 
-               <Link to="/" className="menu-item"  onClick={closeSideBar}>Home</Link>
+               <Link to="/home" className="menu-item"  onClick={closeSideBar}>Home</Link>
               <Link to="/projects" className="menu-item" onClick={closeSideBar}>Projects</Link>
               <Link to="/contact" className="menu-item" onClick={closeSideBar}>Contact</Link>  
            

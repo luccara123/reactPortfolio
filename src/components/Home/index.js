@@ -2,6 +2,7 @@ import React from 'react';
 import bgImage from "../../images/testtt1.png";
 import Nav from "../Nav/index"
 import "../../utilities.css"
+import Resume from '../../components/Resume/index'
 
 
 
@@ -43,6 +44,7 @@ function Home(){
                     <article className="text-container">
                         <p className="skills-content"><span>My Skills:</span> Html, Css, JavaScript, Bootstrap, Tailwind, React, Jquery, Sass, Git, Node, Express</p>
                     </article>
+                    <Resume />
             </div>
             </div>
            
