@@ -14,6 +14,7 @@ function App() {
        <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}
           />
       <Nav></Nav>
+      <Home></Home>
       <Routes>
         <Route path='/home' index element={<Home />} />
         <Route path='/projects' element={<Projects />} />
