@@ -45,16 +45,6 @@ function Projects(){
            
         },
         {
-            id: 4,
-            title: "Edgeledger",
-            description: "project7",
-            technologies: "Html, Css, JavaScript",
-            github: "https://github.com/luccara123/edgeledger",
-            website: "https://luccara123.github.io/edgeledger/",
-            image: project7
-           
-        },
-        {
             id: 5,
             title: "SpaceJetters",
             description: "SpaceJetters is space travel agency with a futuristic concept of providing flights to others planets and moons using rockets.",

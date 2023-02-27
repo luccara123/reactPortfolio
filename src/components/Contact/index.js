@@ -29,7 +29,8 @@ function Contact() {
         console.log(formState);
     }
     return (
-        <section id="contact">
+        <div className='contact-wrapper'>
+                 <section id="contact">
             <h1 data-testid="h1tag" className="section-title">CONTACT ME</h1>
             <div className="line"></div>
             <form id="contact-form" onSubmit={handleSubmit}>
@@ -53,6 +54,8 @@ function Contact() {
                 <button type="submit"  data-testid="submit-btn" className="flex">Submit</button>
             </form>
         </section>
+        </div>
+       
     );
 };
 

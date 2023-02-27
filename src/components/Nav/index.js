@@ -31,7 +31,7 @@ const Nav = () => {
         {
             data.map(({ id, name, url }) => (
 
-              <li key={id} className='navlinks'>
+              <li key={id} className='navlinks hidden'>
                 <NavLink to={url}>
                   { name }
                 </NavLink>

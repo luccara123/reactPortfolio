@@ -6,10 +6,13 @@ import React from "react";
 import Projects from './components/Projects';
 import Home from './components/Home';
 import Contact from './components/Contact';
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
       <div >
+       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}
+          />
       <Nav></Nav>
       <Routes>
         <Route path='/' index element={<Home />} />
