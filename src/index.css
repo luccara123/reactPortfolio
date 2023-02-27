@@ -64,6 +64,15 @@ body {
   overflow: hidden;
  }
 
+ .text-container span{
+  color:rgb(111, 32, 154);
+ }
+
+ .skills-content{
+  padding-top: 50px;
+  font-family: 20px;
+  color: #d6d6d6
+ }
  
  .section-title{
   text-align: center;

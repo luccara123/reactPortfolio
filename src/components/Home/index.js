@@ -37,7 +37,10 @@ function Home(){
                     </div>
 
                     <article className="text-container">
-                        <p className="text-content"> I am a Front-End Developer graduated from UofT Coding Bootcamp. I am passionate about coding, I love to take a design and make it come true, make it user friendly, and keep my code clean and organized. </p>
+                        <p className="text-content"> I am a <span>Front-End Developer</span> graduated from UofT Coding Bootcamp. I am passionate about coding, I love to take a design and make it come true, make it user friendly, and keep my code clean and organized. </p>
+                    </article>
+                    <article className="text-container">
+                        <p className="skills-content"><span>My Skills:</span> Html, Css, JavaScript, Bootstrap, Tailwind, React, Jquery, Sass, Git, Node, Express</p>
                     </article>
             </div>
             </div>
