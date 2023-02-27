@@ -1,32 +1,49 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 
+  
+const Nav = () => {
+  const data = [{
+    id: 1,
+    name: 'Home',
+    url: '/',
+  },
+  {
+    id: 2,
+    name: 'Projects',
+    url: '/projects',
+  },
+  {
+    id: 3,
+    name: 'Contact',
+    url: '/contact',
+  },
+  ];
+  return (
+    <nav className='nav' id="nav">
+      <div className='title_container'>
+        <h1>
+                <NavLink to="/">
+                  Lucca Araujo
+                </NavLink></h1>
+      </div>
+      <ul className='navBar'>
+        {
+            data.map(({ id, name, url }) => (
 
-function Nav(props) {
-    const links = ["About", "Portfolio", "Contact", "Resume"];
-    return (
-        <nav id="nav">
-        <ul>
-          {links.map((link) => (
-            <li
-              className={
-                props.currentSection === link ? "is-active" : "links"
-              }
-              key={link}
-            >
-              <a
-                href={`#${link}`}
-                onClick={() => props.handlePageChange(link)}
-                className={
-                  props.currentSection === link ? "active" : "links"
-                }
-              >
-                {link}
-              </a>
-            </li>
-          ))}
-        </ul>
-        </nav>
-    );
+              <li key={id} className='navlinks'>
+                <NavLink to={url}>
+                  { name }
+                </NavLink>
+              </li>
+
+            ))
+        }
+      </ul>
+    </nav>
+  );
 };
+
+
 
 export default Nav;

@@ -1,20 +1,21 @@
 import './App.css';
-import Header from "./components/Header";
+import Nav from './components/Nav'
+import { Routes, Route } from 'react-router-dom';
 import Footer from "./components/Footer";
 import React from "react";
-import bgImage from "./images/background.jpg"
+import Projects from './components/Projects';
+import Home from './components/Home';
+import Contact from './components/Contact';
 
 function App() {
   return (
-      <div 
-    className="bg_image"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          height: "100vh",
-          backgroundPosition: "center"
-        }}>
-      <Header ></Header>
+      <div >
+      <Nav></Nav>
+      <Routes>
+        <Route path='/' index element={<Home />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
       <Footer></Footer>
         </div>
   );

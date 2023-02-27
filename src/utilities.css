@@ -1,0 +1,140 @@
+
+/* Glowing text effect*/
+
+.glowText{
+    color: #fff;
+    text-shadow: 
+    0 0 2px #fff,
+    0 0 3px #fff,
+    0 0 3px #fff,
+    0 0 2px rgb(201, 188, 196),
+    0 0 3px  rgb(201, 188, 196),
+    0 0 4px rgb(201, 188, 196),
+    0 0 5px  rgb(201, 188, 196);
+    animation: glow 2s 1s ease-in-out infinite alternate ;
+  }
+
+@keyframes glow{
+    100%{
+        text-shadow: 
+        0 0 2px #fff,
+        0 0 3px #fff,
+        0 0 4px #fff,
+        0 0 2px  rgb(201, 188, 196),
+        0 0 3px  rgb(201, 188, 196),
+        0 0 4px   rgb(201, 188, 196),
+        0 0 5px  rgb(201, 188, 196);
+        }
+  
+        0%{
+            text-shadow:
+            0 0 2px #fff,
+            0 0 3px #fff,
+            0 0 4px #fff,
+            0 0 2px  rgb(201, 188, 196),
+            0 0 3px  rgb(201, 188, 196),
+            0 0 5px  rgb(201, 188, 196),
+            0 0 6px  rgb(201, 188, 196),
+            0 0 7px  rgb(201, 188, 196);
+        }
+}
+
+/* Neon border effect*/
+.box-effect{ 
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.box-effect::before{
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 90%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: neon 3s linear infinite;
+    
+}
+
+.box-effect::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: black;
+    border-radius: 16px;
+}
+
+.box-effect div, h3, a, p{
+    position: relative;
+    z-index: 10;
+    color: #fff;
+}
+
+@keyframes neon{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+  
+/*Bubbles animation*/
+.home-content{
+    position: absolute;
+    z-index: 4;
+    
+}
+  
+.animated-box ul li{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    list-style: none;
+    opacity: 0;
+    background: radial-gradient(rgb(115, 30, 161), transparent, transparent);
+    bottom: 0;
+    left: 0;
+    animation: animate 10s linear infinite;
+    z-index: 1;
+}
+  
+.animated-box ul li:nth-child(2){
+    left: 37vw;
+    animation-delay: 2s;
+}
+  
+  
+.animated-box ul li:nth-child(3){
+    left: 25vw;
+    animation-delay: 4s;
+}
+  
+  
+.animated-box ul li:nth-child(4){
+    left: 60vw;
+    animation-delay: 6s;
+}
+  
+  
+.animated-box ul li:nth-child(5){
+    left: 70vw;
+    animation-delay: 4s;
+}
+  
+@keyframes animate {
+    0%{
+      transform: scale(0);
+      opacity: 1;
+      bottom: 0;
+    }
+    100%{
+      transform: scale(10);
+      opacity: 0;
+      bottom: 100vh;
+    }
+}
+
+  
