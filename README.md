@@ -6,9 +6,6 @@ Personal Portfolio with my web development projects. This application has 4 page
 
 Html, Css, Javascript and React.
 
-# Screenshot
-
-![image](https://user-images.githubusercontent.com/78193249/178166847-d286e945-be70-486f-a5a0-b0886f303175.png)
 
 # Installation
 
