@@ -14,9 +14,8 @@ function App() {
        <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}
           />
       <Nav></Nav>
-      <Home></Home>
       <Routes>
-        <Route path='/home' index element={<Home />} />
+        <Route exact path='/reactPortfolio' element={<Home />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>

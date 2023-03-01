@@ -6,7 +6,7 @@ const Nav = () => {
   const data = [{
     id: 1,
     name: 'Home',
-    url: '/home',
+    url: '/reactPortfolio',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const Nav = () => {
     <nav className='nav' id="nav">
       <div className='title_container'>
         <h1>
-                <NavLink to="/home">
+                <NavLink to="/reactPortfolio">
                   Lucca Araujo
                 </NavLink></h1>
       </div>
