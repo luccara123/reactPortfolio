@@ -1,25 +1,29 @@
 import './App.css';
 import Nav from './components/Nav'
 import { Routes, Route } from 'react-router-dom';
-import Footer from "./components/Footer";
 import React from "react";
 import Projects from './components/Projects';
 import Home from './components/Home';
 import Contact from './components/Contact';
-import Sidebar from "./components/Sidebar";
+import About from './components/About/index'
+
+
 
 function App() {
+  
   return (
-      <div >
-       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}
-          />
-      <Nav></Nav>
-      <Routes>
-        <Route exact path='/reactPortfolio' element={<Home />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
-      <Footer></Footer>
+      <div>
+        <main id="main">
+        <Home></Home>
+      <div className='about-wrapper'>
+            <About></About>
+        </div>
+
+        <div className='projects-wrapper'>
+            <Projects></Projects>
+            <Contact></Contact>
+        </div>
+      </main>
         </div>
   );
 };

@@ -7,12 +7,14 @@ import project5 from "../../images/project-5.jpeg"
 import project6 from "../../images/project-6.jpeg"
 import project7 from "../../images/project-7.jpeg"
 import project8 from "../../images/project-8.jpeg"
-
-
 import "../../utilities.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+
+
 
 function Projects(){
-   
+    const starIcon = <FontAwesomeIcon icon={faStar}/>
     const projects = [
         {
             id: 1,
@@ -77,7 +79,7 @@ function Projects(){
         {
             id: 8,
             title: "Password Generator",
-            description: "The website has a generate password button that when clicked, asks the user how many characters he wants for his password, it should be greater than 8, and less than 128. He can choose, lowercase letters, uppercase letters, numbers and symbols. He must choose at least one type of character",
+            description: "The website has a generate password button that when clicked, asks the user how many characters he wants for his password, it should be greater than 8, and less than 128. He can choose, lowercase letters, uppercase letters, numbers and symbols.",
             technologies: "Html, Css, JavaScript",
             github: "https://github.com/luccara123/Password_Generator",
             website: "https://luccara123.github.io/Password_Generator/",
@@ -87,15 +89,33 @@ function Projects(){
     ]
     return(
         <section id="portfolio">
-            <div className="title-container">
-                <h2 className="section-title textGlow"> Projects </h2>
-            </div>
-
-            <div className="line"></div>
+            <div className="marquee">
+                    <div className="marquee-content"> 
+                        <h2 className="glowText">Projects</h2>
+                        <p>{starIcon}</p>    
+                        <h2 className="glowText ">Projects</h2>
+                        <p>{starIcon}</p>    
+                        <h2 className="glowText ">Projects</h2>
+                    <p>{starIcon}</p>   
+                        <h2 className="glowText ">Projects</h2>
+                    <p>{starIcon}</p>   
+                    </div>
+                    <div className="marquee-content">
+                    
+                        <h2 className="glowText ">Projects</h2>   
+                    <p>{starIcon}</p>   
+                        <h2 className="glowText ">Projects</h2>
+                    <p>{starIcon}</p>   
+                        <h2 className="glowText ">Projects</h2>
+                    <p>{starIcon}</p>   
+                        <h2 className="glowText ">Projects</h2>
+                    <p>{starIcon}</p>   
+                    </div>
+                </div>
 
             <div className="projects-container">
             {projects.map((project) => (
-              <div key={projects.id} className="projects-box box-effect">
+              <div key={project.id} className="projects-box box-effect">
                     <div className="img-box">
                     <img src={project.image} alt="project image" />
                     </div>

@@ -1,7 +1,17 @@
 import React, {useState} from 'react';
 import {validateEmail} from '../../utils/helpers';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 function Contact() {
+
+    const starIcon = <FontAwesomeIcon icon={faStar}/>
+    const SERVICE_ID = "service_exa8glv";
+    const TEMPLATE_ID = "template_htesw4c";
+    const USER_ID = "eFQQeKMwMk6NG4cRI";
+
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
     const { name, email, message } = formState;
     const [errorMessage, setErrorMessage] = useState('');
@@ -27,13 +37,50 @@ function Contact() {
     function handleSubmit(event) {
         event.preventDefault();
         console.log(formState);
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, event.target, USER_ID)
+      .then((result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent Successfully'
+        })
+      }, (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: 'error',
+          title: 'Ooops, something went wrong',
+          text: error.text,
+        })
+      });
+    event.target.reset()
     }
     return (
         <div className='contact-wrapper'>
-                 <section id="contact">
-            <h1 data-testid="h1tag" className="section-title">CONTACT ME</h1>
-            <div className="line"></div>
-            <form id="contact-form" onSubmit={handleSubmit}>
+            <section id="contact">
+                <div className="marquee" data-testid="h1tag" >
+                    <div className="marquee-content"> 
+                        <h2 className="glowText">Contact me</h2>
+                        <p>{starIcon}</p>    
+                        <h2 className="glowText ">Contact me</h2>
+                        <p>{starIcon}</p>    
+                        <h2 className="glowText ">Contact me</h2>
+                    <p>{starIcon}</p>   
+                        <h2 className="glowText ">Contact me</h2>
+                    <p>{starIcon}</p>   
+                    </div>
+                    <div className="marquee-content">
+                    
+                        <h2 className="glowText ">Contact me</h2>   
+                    <p>{starIcon}</p>   
+                        <h2 className="glowText ">Contact me</h2>
+                    <p>{starIcon}</p>   
+                        <h2 className="glowText ">Contact me</h2>
+                    <p>{starIcon}</p>   
+                        <h2 className="glowText ">Contact me</h2>
+                    <p>{starIcon}</p>   
+                    </div>
+                </div>
+            <form id="contact-form" onSubmit={handleSubmit} >
                 <div className="flex">
                     <label htmlFor="name">Name</label>
                     <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
