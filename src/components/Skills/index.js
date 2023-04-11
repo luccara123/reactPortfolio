@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React from "react";
+//Skills Images
 import htmlIcon from '../../SkillsIcons/html-icon.png';
 import cssIcon from '../../SkillsIcons/css-icon.png';
 import jsIcon from '../../SkillsIcons/js-icon.png';
@@ -11,65 +11,51 @@ import sassIcon from '../../SkillsIcons/sass-icon.png';
 import gitIcon from '../../SkillsIcons/git-icon.png';
 import nodeIcon from '../../SkillsIcons/node-icon.png';
 import expressIcon from '../../SkillsIcons/express-icon.png';
+import restfulIcon from '../../SkillsIcons/restapi-icon.png';
 
-export default class MultipleItems extends Component {
-    render() {
-      const settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      };
-      return (
-        <div>
-          <Slider {...settings}>
-            <div>
-            <h3>Html</h3>
-            <img className='skill-icon' src={htmlIcon} alt="skill-icon" />
+const Skills =  () => {
+    return(
+        <section>
+            {/* Skills Container */}
+            <div id="skills" className="skills-container">
+                <h2 className="second-title">My Skills</h2>
+                <div className="marquee-background">
+                    <div className="marquee-wrapper">
+                        <div className="marquee"> 
+                            <div className="marquee-group">             
+                                <img className='skill-icon' src={htmlIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={cssIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={jsIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={bootstrapIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={tailwindIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={reactIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={jqueryIcon} alt="skill-icon" />    
+                                <img className='skill-icon' src={sassIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={gitIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={nodeIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={expressIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={restfulIcon} alt="skill-icon" />
+                            </div>
+                            <div className="marquee-group" aria-hidden="true">             
+                                <img className='skill-icon' src={htmlIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={cssIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={jsIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={bootstrapIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={tailwindIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={reactIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={jqueryIcon} alt="skill-icon" />    
+                                <img className='skill-icon' src={sassIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={gitIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={nodeIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={expressIcon} alt="skill-icon" />
+                                <img className='skill-icon' src={restfulIcon} alt="skill-icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              <h3>Css</h3>
-              <img className='skill-icon' src={cssIcon} alt="skill-icon" />
-            </div>
-            <div>
-              <h3>JavaScript</h3>
-              <img className='skill-icon' src={jsIcon} alt="skill-icon" />
-            </div>
-            <div>
-              <h3>Bootstrap</h3>
-              <img className='skill-icon' src={bootstrapIcon} alt="skill-icon" />
-            </div>
-            <div>
-              <h3>Tailwind</h3>
-              <img className='skill-icon' src={tailwindIcon} alt="skill-icon" />
-            </div>
-            <div>
-              <h3>React</h3>
-              <img className='skill-icon' src={reactIcon} alt="skill-icon" />
-            </div>
-            <div>
-              <h3>Jquery</h3>
-              <img className='skill-icon' src={jqueryIcon} alt="skill-icon" />
-            </div>
-            <div>
-              <h3>Sass</h3>
-              <img className='skill-icon' src={sassIcon} alt="skill-icon" />
-            </div>
-            <div>
-              <h3>Git</h3>
-              <img className='skill-icon' src={gitIcon} alt="skill-icon" />
-            </div>
-            <div>
-              <h3>Node</h3>
-              <img className='skill-icon' src={nodeIcon} alt="skill-icon" />
-            </div>
-            <div>
-              <h3>Express</h3>
-              <img className='skill-icon' src={expressIcon} alt="skill-icon" />
-            </div>
-          </Slider>
-        </div>
-      );
-    }
-  }
+        </section>
+    )
+}
+
+export default Skills;

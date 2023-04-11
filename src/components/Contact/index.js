@@ -3,7 +3,9 @@ import {validateEmail} from '../../utils/helpers';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import contactAvatar from '../../purpleIcons/Copy Writing.png';
+import bgContact from '../../images/stars-bg.jpg'
 
 function Contact() {
 
@@ -55,51 +57,48 @@ function Contact() {
     event.target.reset()
     }
     return (
-        <div className='contact-wrapper'>
+        <div className='contact-wrapper'  style={{
+            backgroundImage: `url(${bgContact})`,
+            backgroundSize: "cover",
+            height: "100vh",
+            backgroundPosition: "center"
+            }}>
             <section id="contact">
-                <div className="marquee" data-testid="h1tag" >
-                    <div className="marquee-content"> 
-                        <h2 className="glowText">Contact me</h2>
-                        <p>{starIcon}</p>    
-                        <h2 className="glowText ">Contact me</h2>
-                        <p>{starIcon}</p>    
-                        <h2 className="glowText ">Contact me</h2>
-                    <p>{starIcon}</p>   
-                        <h2 className="glowText ">Contact me</h2>
-                    <p>{starIcon}</p>   
+                {/* Box-1 */}
+                <div className="contact-box-1" data-testid="h1tag" >
+                    <div className='box-wrapper'>
+                    <h2 className="glowText section-title">Contact me</h2>
+                    <form id="contact-form" onSubmit={handleSubmit} >
+                    <div className="flex">
+                        <label htmlFor="name">Name</label>
+                        <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
                     </div>
-                    <div className="marquee-content">
-                    
-                        <h2 className="glowText ">Contact me</h2>   
-                    <p>{starIcon}</p>   
-                        <h2 className="glowText ">Contact me</h2>
-                    <p>{starIcon}</p>   
-                        <h2 className="glowText ">Contact me</h2>
-                    <p>{starIcon}</p>   
-                        <h2 className="glowText ">Contact me</h2>
-                    <p>{starIcon}</p>   
+                    <div className="flex">
+                        <label htmlFor="email">Email address</label>
+                        <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
                     </div>
+                    <div className="flex">
+                        <label htmlFor="message">Message</label>
+                        <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+                    </div >
+                    {errorMessage && (
+                        <div>
+                            <p className="error-text">{errorMessage}</p>
+                        </div>
+                    )}
+                   
+                    <button type='submit' class="btn-home">
+                        Submit
+                        <span className='btn-home-span'></span>
+                     </button>
+                </form>
                 </div>
-            <form id="contact-form" onSubmit={handleSubmit} >
-                <div className="flex">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
-                </div>
-                <div className="flex">
-                    <label htmlFor="email">Email address</label>
-                    <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
-                </div>
-                <div className="flex">
-                    <label htmlFor="message">Message</label>
-                    <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-                </div >
-                {errorMessage && (
-                    <div>
-                        <p className="error-text">{errorMessage}</p>
-                    </div>
-                )}
-                <button type="submit"  data-testid="submit-btn" className="flex">Submit</button>
-            </form>
+            </div>
+
+            <div className='contact-box-2'>
+            <img className='contact-img float' src={contactAvatar} alt="sasdaads" />
+            </div>
+            
         </section>
         </div>
        

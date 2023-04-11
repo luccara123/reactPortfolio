@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import * as Scroll from 'react-scroll';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+import logo from '../../images/port-logo.png';
   
 const Nav = () => {
 
@@ -40,12 +42,10 @@ const Nav = () => {
   return (
     <div  className={ color ? 'nav-wrapper nav-bg' : "nav-wrapper"}>
         <nav className='nav' id="nav">
-          <div className='title_container'>
-            <h1>
+          <div className='logo'>
               <Link  smooth spy to="home">
-                  Lucca Araujo
+              <h2>LUCCA ARAUJO</h2>
               </Link>
-            </h1>
           </div>
           <ul className='navBar'>
             {
@@ -58,6 +58,7 @@ const Nav = () => {
                 
                 ))
             }
+            <li className="navlinks hidden email"><a href="mailto:lucca.ara7@gmail.com">lucca.ara7@gmail.com</a></li>
           </ul>
         </nav>
     </div>

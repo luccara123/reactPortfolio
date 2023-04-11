@@ -1,75 +1,71 @@
 import React from "react";
-import MultipleItems from '../Skills/index'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-//Skills Images
-import htmlIcon from '../../SkillsIcons/html-icon.png';
-import cssIcon from '../../SkillsIcons/css-icon.png';
-import jsIcon from '../../SkillsIcons/js-icon.png';
-import bootstrapIcon from '../../SkillsIcons/bootstrap-icon.png';
-import tailwindIcon from '../../SkillsIcons/tailwind-icon.png';
-import reactIcon from '../../SkillsIcons/react-icon.png';
-import jqueryIcon from '../../SkillsIcons/jquery-icon.png';
-import sassIcon from '../../SkillsIcons/sass-icon.png';
-import gitIcon from '../../SkillsIcons/git-icon.png';
-import nodeIcon from '../../SkillsIcons/node-icon.png';
-import expressIcon from '../../SkillsIcons/express-icon.png';
+
+// Process to build projects icons
+import creativeImage from '../../purpleIcons/Creative Process_Outline.png';
+import toDoImage from '../../purpleIcons/Scrum board_Outline (1).png';
+import codeImage from '../../purpleIcons/Coding _Outline (1).png';
+import launchImage from '../../purpleIcons/Campaign launch_Flatline.png';
+import Skills from '../Skills/index'
 
 function About(){
     const starIcon = <FontAwesomeIcon icon={faStar}/>
     return(
         <section id="about">
+             <h2 className="glowText section-title"> About me</h2>
             <div className="about-container">
-                <h2 className="glowText"> About me</h2>
-                <article className="icons-container">
-                    <p>sfdsfdsf dsfdsfdsfdsf sdfsdfsdfsdfsd sfsdfsdfsdfsdf gh  htfg fg df gdf g dfe re rh  fghf fd gdf gf dg fdg dfg w ere rw erw   jjgjghj ghj ghj ghj gh jjh  rwe rwe r wer w  fgh tf h  fg f gh fgh gf hgfhgfgghhg
-                    </p>
-                </article>
-            </div>
-
-
-
-
-            {/* Skills Container */}
-            <div id="skills" className="skills-container">
-                <h2 className="glowText">My Skills</h2>
-                <div className="marquee-background">
-                    <div className="marquee-wrapper">
-                        <div className="marquee"> 
-                            <div className="marquee-group">             
-                                <img className='skill-icon' src={htmlIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={cssIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={jsIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={bootstrapIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={tailwindIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={reactIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={jqueryIcon} alt="skill-icon" />    
-                                <img className='skill-icon' src={sassIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={gitIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={nodeIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={expressIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={expressIcon} alt="skill-icon" />
-                            </div>
-                            <div className="marquee-group" aria-hidden="true">             
-                                <img className='skill-icon' src={htmlIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={cssIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={jsIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={bootstrapIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={tailwindIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={reactIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={jqueryIcon} alt="skill-icon" />    
-                                <img className='skill-icon' src={sassIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={gitIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={nodeIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={expressIcon} alt="skill-icon" />
-                                <img className='skill-icon' src={expressIcon} alt="skill-icon" />
-                            </div>
-                        </div>
-                    </div>
+                <div className="about-1">
+                    <article className="paragraph">
+                        <h3> Education</h3>
+                        <p>
+                            I am a self-taught web developer. I started my journey in 2020, by learning html, css and Javascript. In 2022, I graduated from University Of Toronto School Of Continuing Studies: Coding Bootcamp. During the 6 months program, I was able to learn the most known full stack technologies and apply this knowledge in lots of projects. In the three team projects we had, I was the team leader and I received great feedback from all the instructors. Since then, I've focused on learning more about front end technologies, where I've found my passion and curiosity.
+                        </p>
+                    </article>
                 </div>
+                <div className="line3"></div>
+                <div className="about-2">
+                    <article className="paragraph">
+                    <h3>Work Experience</h3>
+                        <p>
+                            
+                        </p>
+                    </article>
+                </div>
+               
             </div>
-            
+
+            <div className="lines-box">
+                <div className="line1"></div>
+                <div className="line2"></div>
+            </div>
+
+            <section className="project-icons">
+                <h2 className="second-title">How I build projects</h2>
+
+                <div className="process-images">
+                    <div className="process-item">
+                        <img className='process-icon' src={creativeImage} alt="sasdas" />
+                        <h3>Think Outsite The Box</h3>
+                    </div>
+                    <div  className="process-item">
+                        <img className='process-icon' src={toDoImage} alt="sasdas" />
+                        <h3>Do Scrum Board</h3>
+                    </div>
+                    <div  className="process-item">
+                        <img className='process-icon' src={codeImage} alt="sasdas" />
+                        <h3>Code and Debug</h3>
+                    </div>
+                    <div  className="process-item">
+                        <img className='process-icon' src={launchImage} alt="sasdas" />
+                        <h3>Launch</h3>
+                    </div>
+                    
+                </div>
+            </section>
+             <Skills></Skills>
+
         </section>
         
     )

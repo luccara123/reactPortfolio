@@ -89,29 +89,9 @@ function Projects(){
     ]
     return(
         <section id="portfolio">
-            <div className="marquee">
-                    <div className="marquee-content"> 
-                        <h2 className="glowText">Projects</h2>
-                        <p>{starIcon}</p>    
-                        <h2 className="glowText ">Projects</h2>
-                        <p>{starIcon}</p>    
-                        <h2 className="glowText ">Projects</h2>
-                    <p>{starIcon}</p>   
-                        <h2 className="glowText ">Projects</h2>
-                    <p>{starIcon}</p>   
-                    </div>
-                    <div className="marquee-content">
-                    
-                        <h2 className="glowText ">Projects</h2>   
-                    <p>{starIcon}</p>   
-                        <h2 className="glowText ">Projects</h2>
-                    <p>{starIcon}</p>   
-                        <h2 className="glowText ">Projects</h2>
-                    <p>{starIcon}</p>   
-                        <h2 className="glowText ">Projects</h2>
-                    <p>{starIcon}</p>   
-                    </div>
-                </div>
+            <div className="marqueew">
+                <h2 className="glowText section-title">Projects</h2>
+             </div>
 
             <div className="projects-container">
             {projects.map((project) => (
