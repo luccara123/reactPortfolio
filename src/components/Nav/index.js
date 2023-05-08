@@ -50,7 +50,7 @@ const Nav = () => {
           <ul className='navBar'>
             {
                 data.map(({ id, name, section }) => (
-                  <li key={id} className='navlinks hidden'>
+                  <li key={id} className='navLinks hidden'>
                     <Link activeClass="active" smooth spy to={section}>
                     {name}
                     </Link>  
@@ -58,7 +58,7 @@ const Nav = () => {
                 
                 ))
             }
-            <li className="navlinks hidden email"><a href="mailto:lucca.ara7@gmail.com">lucca.ara7@gmail.com</a></li>
+            <li className="hidden email"><a href="mailto:lucca.ara7@gmail.com">lucca.ara7@gmail.com</a></li>
           </ul>
         </nav>
     </div>

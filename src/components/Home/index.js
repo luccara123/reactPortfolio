@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../../utilities.css";
-import { NavLink } from 'react-router-dom';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import {useEffect} from 'react';
+import Typewriter from "typewriter-effect";
+
 
 //components
 import Nav from '../../components/Nav'
@@ -17,6 +19,54 @@ import Ilustration from '../../purpleIcons/Startup.png';
 
 
 function Home(){
+    
+
+    const [isActiveA, setIsActiveA] = useState(false);
+    function handleClickA(event){
+        setIsActiveA(current => !current);
+    }
+    const [isActiveB, setIsActiveB] = useState(false);
+    function handleClickB(event){
+        setIsActiveB(current => !current);
+    }
+    const [isActiveC, setIsActiveC] = useState(false);
+    function handleClickC(event){
+        setIsActiveC(current => !current);
+    }
+    const [isActiveD, setIsActiveD] = useState(false);
+    function handleClickD(event){
+        setIsActiveD(current => !current);
+    }
+    const [isActiveE, setIsActiveE] = useState(false);
+    function handleClickE(event){
+        setIsActiveE(current => !current);
+    }
+    const [isActiveF, setIsActiveF] = useState(false);
+    function handleClickF(event){
+        setIsActiveF(current => !current);
+    }
+    const [isActiveG, setIsActiveG] = useState(false);
+    function handleClickG(event){
+        setIsActiveG(current => !current);
+    }
+    const [isActiveH, setIsActiveH] = useState(false);
+    function handleClickH(event){
+        setIsActiveH(current => !current);
+    }
+    const [isActiveI, setIsActiveI] = useState(false);
+    function handleClickI(event){
+        setIsActiveI(current => !current);
+    }
+    const [isActiveJ, setIsActiveJ] = useState(false);
+    function handleClickJ(event){
+        setIsActiveJ(current => !current);
+    }
+    const [isActiveK, setIsActiveK] = useState(false);
+    function handleClickK(event){
+        setIsActiveK(current => !current);
+    }
+    
+  
     return(
         <div>
             <section id="home" className="bg_image"
@@ -52,11 +102,45 @@ function Home(){
                     <div className="first-container">
                         <div className="title-container">
                             <h2 className="subtitle">Hi there, My name is</h2>
-                            <h1 className='title-name glowText'>Lucca <span className='purple'> Araujo</span></h1>
+                            <h1 className='title-name'>
+                                <span className={isActiveA ? '' : 'glowText'} onClick={handleClickA} >
+                                      L 
+                                </span>
+                                <span className={isActiveB ? '' : 'glowText'} onClick={handleClickB}>
+                                    U
+                                </span>
+                                <span className={isActiveC ? '' : 'glowText'} onClick={handleClickC}>
+                                    C
+                                </span>
+                                <span className={isActiveD ? '' : 'glowText'} onClick={handleClickD}>
+                                    C
+                                </span>
+                                <span className={isActiveE ? '' : 'glowText'} onClick={handleClickE} >
+                                    A
+                                </span>
+                            </h1>
+                            <h1 className='title-name'>
+                            <span className={isActiveF ? '' : 'glowText'} onClick={handleClickF}>
+                                    A
+                                </span >
+                                <span className={isActiveG? '' : 'glowText'} onClick={handleClickG}>
+                                    R
+                                </span>
+                                <span className={isActiveH ? '' : 'glowText'} onClick={handleClickH}>
+                                    A
+                                </span>
+                                <span className={isActiveI ? '' : 'glowText'} onClick={handleClickI}>
+                                    U
+                                </span>
+                                <span className={isActiveJ ? '' : 'glowText'} onClick={handleClickJ}>
+                                    J
+                                </span>
+                                <span className={isActiveK ? '' : 'glowText'} onClick={handleClickK}>
+                                    O
+                                </span>
+                            </h1>
                         </div>
 
-                       
-                        
                         <div className='description-container'>
                             <article className="text-container">
                                 <p className="text-content"> I am a <span>Front End Developer </span>
@@ -64,10 +148,10 @@ function Home(){
                                 <p></p>
                             </article>
                             <button class="btn-home">
-                                <NavLink to="/projects">
+                                <Link smooth spy to="portfolio">
                                     View Projects
                                     <span className='btn-home-span'></span>
-                                </NavLink>
+                                </Link>
                             </button>
                         </div>
                     </div>
@@ -85,24 +169,24 @@ function Home(){
             </section>
 
            
-            <div className='flex-width'>
-            <p className='more-about'> Learn more about me</p>
-            </div>
-            {/* purple footer with arrow */}
+            <div className='flex-width'></div>
+
+            {/* Typewriter box */}
            <div className="purple-bubble">
-            
-            <div className='circle-wrapper'>
-            <Link  smooth spy to="about">
-                <div className='whiteCircle'>
-                    <p className='arrowIcon arrowRight'>
-                    </p>
-                    <p className='arrowIcon arrowLeft'>
-                    </p>
-                    <div className='circle'></div>
-                    <div className='circle-bottom'></div>
-                </div>     
-            </Link>
-            </div>
+                <div className='typewriter-box'>
+                        <p className='typewriter-fixed'> I work with:  
+                            <span className='typewriter-text'>
+                            <Typewriter
+                            options={{
+                                strings: ['clean code', 'responsive apps','creative layouts', 'interactive websites' ],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                            />
+                            </span>
+                        </p>
+                    
+                </div>
             </div>
 
         </div>

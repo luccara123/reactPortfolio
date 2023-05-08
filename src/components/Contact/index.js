@@ -5,7 +5,9 @@ import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import contactAvatar from '../../purpleIcons/Copy Writing.png';
-import bgContact from '../../images/stars-bg.jpg'
+import bgContact from '../../images/stars-bg.jpg';
+import Footer from '../Footer';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function Contact() {
 
@@ -19,7 +21,8 @@ function Contact() {
     const [errorMessage, setErrorMessage] = useState('');
     function handleChange(event) {
         if (event.target.name === 'email') {
-            const isValid = validateEmail(event.target.value);
+           const isValid = validateEmail(event.target.value);
+          
             if(!isValid) {
                 setErrorMessage('Your email is invalid.');
             } else {
@@ -35,26 +38,26 @@ function Contact() {
         if(!errorMessage) {
             setFormState({...formState, [event.target.name]: event.target.value });
         }
+       
     }
     function handleSubmit(event) {
         event.preventDefault();
         console.log(formState);
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, event.target, USER_ID)
+        
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, event.target, USER_ID)
       .then((result) => {
         console.log(result.text);
         Swal.fire({
           icon: 'success',
           title: 'Message Sent Successfully'
         })
-      }, (error) => {
+      } , (error) => {
         console.log(error.text);
         Swal.fire({
           icon: 'error',
           title: 'Ooops, something went wrong',
-          text: error.text,
         })
       });
-    event.target.reset()
     }
     return (
         <div className='contact-wrapper'  style={{
@@ -68,7 +71,10 @@ function Contact() {
                 <div className="contact-box-1" data-testid="h1tag" >
                     <div className='box-wrapper'>
                     <h2 className="glowText section-title">Contact me</h2>
-                    <form id="contact-form" onSubmit={handleSubmit} >
+                    <form id="contact-form" onSubmit={!errorMessage ? handleSubmit : Swal.fire({
+          icon: 'error',
+          title: 'Make sure to fill out all the spaces proparly', 
+        })} >
                     <div className="flex">
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
@@ -100,6 +106,20 @@ function Contact() {
             </div>
             
         </section>
+       <div className='footer'>
+       <Link  smooth spy to="home">
+       <div className='circle-wrapper'>
+                <div className='whiteCircle'>
+                        <p className='arrowIcon arrowRight'>
+                        </p>
+                        <p className='arrowIcon arrowLeft'>
+                        </p>
+                        <div className='circle'></div>
+                        <div className='circle-bottom'></div>
+                    </div>
+                </div>   
+             </Link>
+       </div>
         </div>
        
     );

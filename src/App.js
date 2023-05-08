@@ -6,7 +6,7 @@ import Projects from './components/Projects';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About/index'
-import Skills from './components/Skills/index';
+import Footer from './components/Footer';
 
 
 
@@ -19,14 +19,13 @@ function App() {
       <div className='about-wrapper'>
             <About></About>
       </div>
-     
-  
-
+    
         <div className='projects-wrapper'>
             <Projects></Projects>
             <Contact></Contact>
         </div>
       </main>
+     
         </div>
   );
 };

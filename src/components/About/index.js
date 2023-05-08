@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Resume from "../Resume";
 
 
 // Process to build projects icons
@@ -29,8 +30,9 @@ function About(){
                     <article className="paragraph">
                     <h3>Work Experience</h3>
                         <p>
-                            
+                            Currently, I am looking for my first opportunity to launch my career as a web developer. I have experience with customer service and working as a team, since I worked three years in a restaurant and I grew from a dishwasher to a manager after somes months of learning and giving my best to the company. Therefore, I know I am capable of taking an opportunity and dedicate myself completly.
                         </p>
+                        <Resume></Resume>
                     </article>
                 </div>
                
