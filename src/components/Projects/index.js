@@ -10,6 +10,7 @@ import project8 from "../../images/project-8.jpeg"
 import "../../utilities.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { Fade , JackInTheBox, Bounce , Roll } from "react-awesome-reveal";
 
 
 
@@ -91,12 +92,13 @@ function Projects(){
     return(
         <section id="portfolio">
             <div>
-                <h2 className="glowText section-title">Projects</h2>
+                <Fade delay={200}><h2 className="glowText section-title">Projects</h2></Fade>
              </div>
 
             <div className="projects-container">
             {projects.map((project) => (
             <div className='projects-bg ' id={ project.id % 2 == 0 ? 'even' : 'odd' } >
+                <Fade cascade  damping={0.1} direction="top">
               <div key={project.id} id={ project.id % 2 == 0 ? 'reverse' : 'no-reverse' } className="projects-box box-effect">
                     <div className="img-box">
                     <img src={project.image} className='project-img' alt="project image" />
@@ -118,6 +120,7 @@ function Projects(){
                         </div>
                     </div>
               </div>
+              </Fade>
               </div>
               ))}
         </div>

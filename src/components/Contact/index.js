@@ -2,62 +2,88 @@ import React, {useState} from 'react';
 import {validateEmail} from '../../utils/helpers';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 import contactAvatar from '../../purpleIcons/Copy Writing.png';
 import bgContact from '../../images/stars-bg.jpg';
-import Footer from '../Footer';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Fade , JackInTheBox, Bounce , Roll } from "react-awesome-reveal";
+
 
 function Contact() {
 
-    const starIcon = <FontAwesomeIcon icon={faStar}/>
-    const SERVICE_ID = "service_exa8glv";
+    const SERVICE_ID = "service_0a0c3f7";
     const TEMPLATE_ID = "template_htesw4c";
     const USER_ID = "eFQQeKMwMk6NG4cRI";
-
+    
+    const [isBlank, setIsBlank] = useState(false)
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
     const { name, email, message } = formState;
     const [errorMessage, setErrorMessage] = useState('');
+
+    const [isEmailValidaded, setIsEmailValidaded] = useState(false);
+    const [isNameValidaded, setIsNameValidaded] = useState(false);
+    const [isMessageValidaded, setIsMessageValidaded] = useState(false);
+
     function handleChange(event) {
         if (event.target.name === 'email') {
            const isValid = validateEmail(event.target.value);
           
-            if(!isValid) {
+            if(!isValid || event.target.email === '') {
                 setErrorMessage('Your email is invalid.');
             } else {
                 setErrorMessage('');
+                setIsEmailValidaded(true);
             }
-        } else {
+        }
+         else {
             if (!event.target.value.length) {
                 setErrorMessage(`${event.target.name} is required.`);
-            } else {
-                setErrorMessage('');
+            } if(event.target.name != ''){
+                setIsNameValidaded(true)
+            } if(event.target.message != ''){
+                setIsMessageValidaded(true)
+            }
+                else {
+                setErrorMessage(''); 
             }
         }
         if(!errorMessage) {
             setFormState({...formState, [event.target.name]: event.target.value });
         }
-       
     }
+
+    function formStateTrue () {
+        const name = formState.name;
+        const email = formState.email;
+        const message = formState.message;
+        if(name && message && email === ''){
+            setIsBlank(true);
+        } else{
+            setIsBlank(false); 
+        }       
+    }
+    
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(formState);
-        
-            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, event.target, USER_ID)
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, event.target, USER_ID)
       .then((result) => {
         console.log(result.text);
         Swal.fire({
           icon: 'success',
           title: 'Message Sent Successfully'
         })
-      } , (error) => {
-        console.log(error.text);
-        Swal.fire({
-          icon: 'error',
-          title: 'Ooops, something went wrong',
-        })
-      });
+      } , 
+        (error) => {
+            console.log(error.text);
+            Swal.fire({
+              icon: 'error',
+              title: 'Ooops, something went wrong',
+            })
+          });
+          formStateTrue ()  
+    }
+
+    function errorWarning (){
+       setErrorMessage('Please fill out the information proparly.')
     }
     return (
         <div className='contact-wrapper'  style={{
@@ -66,15 +92,16 @@ function Contact() {
             height: "100vh",
             backgroundPosition: "center"
             }}>
+            <Fade cascade>
             <section id="contact">
                 {/* Box-1 */}
+               
                 <div className="contact-box-1" data-testid="h1tag" >
+              
                     <div className='box-wrapper'>
-                    <h2 className="glowText section-title">Contact me</h2>
-                    <form id="contact-form" onSubmit={!errorMessage ? handleSubmit : Swal.fire({
-          icon: 'error',
-          title: 'Make sure to fill out all the spaces proparly', 
-        })} >
+                        <div>
+                    <Fade delay={200}><h2 className="glowText section-title">Contact me</h2></Fade>
+                    <form id="contact-form" onSubmit={ isBlank || isEmailValidaded && isNameValidaded && isMessageValidaded  ? handleSubmit : errorWarning }>
                     <div className="flex">
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
@@ -99,13 +126,19 @@ function Contact() {
                      </button>
                 </form>
                 </div>
+                </div>
+              
             </div>
-
-            <div className='contact-box-2'>
-            <img className='contact-img float' src={contactAvatar} alt="sasdaads" />
-            </div>
+           
+            
+                <div className='contact-box-2'>
+                <img className='contact-img float' src={contactAvatar} alt="sasdaads" />
+                </div>
+           
+           
             
         </section>
+        </Fade>
        <div className='footer'>
        <Link  smooth spy to="home">
        <div className='circle-wrapper'>

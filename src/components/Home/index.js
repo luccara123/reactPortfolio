@@ -3,7 +3,7 @@ import "../../utilities.css";
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import {useEffect} from 'react';
 import Typewriter from "typewriter-effect";
-
+import { Fade , JackInTheBox, Bounce , Roll, Slide } from "react-awesome-reveal";
 
 //components
 import Nav from '../../components/Nav'
@@ -19,8 +19,6 @@ import Ilustration from '../../purpleIcons/Startup.png';
 
 
 function Home(){
-    
-
     const [isActiveA, setIsActiveA] = useState(false);
     function handleClickA(event){
         setIsActiveA(current => !current);
@@ -65,8 +63,6 @@ function Home(){
     function handleClickK(event){
         setIsActiveK(current => !current);
     }
-    
-  
     return(
         <div>
             <section id="home" className="bg_image"
@@ -81,8 +77,6 @@ function Home(){
                 <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
                 <Nav></Nav>
                 <SideIcons></SideIcons>
-
-               
 
                  {/* Lights effect */}
                 <div className='animated-box'>
@@ -100,8 +94,10 @@ function Home(){
                  {/*Box-1: My info */}
                 <div className='home-content'>
                     <div className="first-container">
+                        <Fade cascade dumping={0.2}>
                         <div className="title-container">
                             <h2 className="subtitle">Hi there, My name is</h2>
+                          
                             <h1 className='title-name'>
                                 <span className={isActiveA ? '' : 'glowText'} onClick={handleClickA} >
                                       L 
@@ -119,7 +115,7 @@ function Home(){
                                     A
                                 </span>
                             </h1>
-                            <h1 className='title-name'>
+                             <h1 className='title-name'>
                             <span className={isActiveF ? '' : 'glowText'} onClick={handleClickF}>
                                     A
                                 </span >
@@ -140,13 +136,16 @@ function Home(){
                                 </span>
                             </h1>
                         </div>
-
+                        </Fade>
+                        <Fade cascade dumping={0.2}>
                         <div className='description-container'>
                             <article className="text-container">
                                 <p className="text-content"> I am a <span>Front End Developer </span>
                                 </p>
                                 <p></p>
                             </article>
+                            <img className='saturn-img' src={saturn} alt="saturn with moons" />
+                
                             <button class="btn-home">
                                 <Link smooth spy to="portfolio">
                                     View Projects
@@ -154,17 +153,20 @@ function Home(){
                                 </Link>
                             </button>
                         </div>
+                        </Fade>
                     </div>
 
                      {/* Space images */}
                      
                     {/* <img className='rocket-img' src={rocket} alt="purple rocket" /> */}
-                    <img className='saturn-img' src={saturn} alt="saturn with moons" />
-                    
+                
                     {/*Box-2: Ilustration */}
+                    <Fade>
                     <div className='ilustration-container'>
                         <img className='ilustration float' src={Ilustration} alt="ilustration" />
                     </div>
+                    </Fade>
+                    
                 </div>
             </section>
 
@@ -173,7 +175,9 @@ function Home(){
 
             {/* Typewriter box */}
            <div className="purple-bubble">
+
                 <div className='typewriter-box'>
+                    <Fade>
                         <p className='typewriter-fixed'> I work with:  
                             <span className='typewriter-text'>
                             <Typewriter
@@ -185,6 +189,7 @@ function Home(){
                             />
                             </span>
                         </p>
+                    </Fade>
                     
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import {Slide, Fade,  JackInTheBox } from "react-awesome-reveal";
 //Skills Images
 import htmlIcon from '../../SkillsIcons/html-icon.png';
 import cssIcon from '../../SkillsIcons/css-icon.png';
@@ -13,12 +14,14 @@ import nodeIcon from '../../SkillsIcons/node-icon.png';
 import expressIcon from '../../SkillsIcons/express-icon.png';
 import restfulIcon from '../../SkillsIcons/restapi-icon.png';
 
+
 const Skills =  () => {
     return(
         <section>
             {/* Skills Container */}
             <div id="skills" className="skills-container">
-                <h2 className="second-title">My Skills</h2>
+            <JackInTheBox direction="left" delay={400} damping={1}> <h2 className="second-title">My Skills</h2></JackInTheBox>
+            <Fade delay={400} cascade={true} >
                 <div className="marquee-background">
                     <div className="marquee-wrapper">
                         <div className="marquee"> 
@@ -53,6 +56,7 @@ const Skills =  () => {
                         </div>
                     </div>
                 </div>
+                </Fade>
             </div>
         </section>
     )
