@@ -192,7 +192,7 @@ html{
 
  .home-content{
   display: flex;
-  align-items: center;
+  
   justify-content: start;
   padding-left: 50px;
   padding-right: 50px;
@@ -208,8 +208,10 @@ html{
   align-items: center;
   justify-content: center;
   padding-left: 40px;
-  padding-top: 30px;
+ padding-top: 200px;
 }
+
+
 
  .text-container span{
   color: var(--purple-font)
@@ -263,7 +265,6 @@ margin-top: 90px;
   text-align: center;
   align-items: center;
   width: 40rem;
-  margin-top: 10px;
 }
 
 /* Space Images*/
@@ -306,9 +307,7 @@ margin-top: 90px;
 .saturn-img{
   position: absolute;
   height: 350px;
-  top: 28%;
-  left: 27%;
-  
+  top: 38%;
  
 }
 
@@ -316,6 +315,9 @@ margin-top: 90px;
   animation: saturn 17s infinite;
 }
 
+.btn-hero{
+  margin-top: 250px !important;
+}
 
 @keyframes saturn{
   0% {

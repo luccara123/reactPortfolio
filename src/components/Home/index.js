@@ -155,7 +155,7 @@ function Home(){
                             </article>
                             <img className='saturn-img hide' src={saturn} alt="saturn with moons" />
                 
-                            <button class="btn-home">
+                            <button class="btn-home btn-hero">
                                 <Link smooth spy to="portfolio">
                                     View Projects
                                     <span className='btn-home-span'></span>
