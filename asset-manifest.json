@@ -1,25 +1,38 @@
 {
   "files": {
-    "main.css": "/reactPortfolio/static/css/main.a5dce5a5.css",
-    "main.js": "/reactPortfolio/static/js/main.72167530.js",
-    "static/js/496.0b8e298f.chunk.js": "/reactPortfolio/static/js/496.0b8e298f.chunk.js",
-    "static/media/testtt1.png": "/reactPortfolio/static/media/testtt1.79cb5f46291184fb8fbd.png",
+    "main.css": "/reactPortfolio/static/css/main.b65b8361.css",
+    "main.js": "/reactPortfolio/static/js/main.543d7a1f.js",
+    "static/js/496.48d78ca9.chunk.js": "/reactPortfolio/static/js/496.48d78ca9.chunk.js",
+    "static/media/officialbackground.png": "/reactPortfolio/static/media/officialbackground.8c39ced54cd1885688a9.png",
+    "static/media/Copy Writing.png": "/reactPortfolio/static/media/Copy Writing.df2d4ec2d58771872991.png",
+    "static/media/stars-bg.jpg": "/reactPortfolio/static/media/stars-bg.a6cc71a59289ddfe4059.jpg",
     "static/media/project-7.jpeg": "/reactPortfolio/static/media/project-7.23e924b51fe47358b002.jpeg",
+    "static/media/Startup.png": "/reactPortfolio/static/media/Startup.1bb0899d80716efa4b24.png",
+    "static/media/port-logo.png": "/reactPortfolio/static/media/port-logo.a6aee707af5364211ea6.png",
+    "static/media/rocket.png": "/reactPortfolio/static/media/rocket.1b8787e3541baf0f0f57.png",
     "static/media/project-1.jpeg": "/reactPortfolio/static/media/project-1.ed3d182d954bca2d8264.jpeg",
+    "static/media/saturn.png": "/reactPortfolio/static/media/saturn.97c8f4ba6744e09f9021.png",
+    "static/media/LuccaResume.pdf": "/reactPortfolio/static/media/LuccaResume.74570cdf115d122664d4.pdf",
     "static/media/project-6.jpeg": "/reactPortfolio/static/media/project-6.0883ba795609065d1c84.jpeg",
     "static/media/project-2.jpeg": "/reactPortfolio/static/media/project-2.51a59bbf14b237f504a5.jpeg",
     "static/media/project-4.jpeg": "/reactPortfolio/static/media/project-4.f9c4d2f6eaae07fbd42a.jpeg",
     "static/media/project-5.jpeg": "/reactPortfolio/static/media/project-5.1180812e707ff7dbc6ca.jpeg",
-    "static/media/luccaresume.pdf": "/reactPortfolio/static/media/luccaresume.1207fe4f6fff6ec91019.pdf",
     "static/media/project-8.jpeg": "/reactPortfolio/static/media/project-8.924ec011390441189e32.jpeg",
     "static/media/project-3.jpeg": "/reactPortfolio/static/media/project-3.7ab86812c1327f7a27a5.jpeg",
+    "static/media/Campaign launch_Flatline.png": "/reactPortfolio/static/media/Campaign launch_Flatline.3c891c444db5ac047b63.png",
+    "static/media/Coding _Outline (1).png": "/reactPortfolio/static/media/Coding _Outline (1).e7f0abb0279d09c73568.png",
+    "static/media/Creative Process_Outline.png": "/reactPortfolio/static/media/Creative Process_Outline.19f6eb96c99758062559.png",
+    "static/media/Scrum board_Outline (1).png": "/reactPortfolio/static/media/Scrum board_Outline (1).d28fb611a426c4b69a51.png",
+    "static/media/react-icon.png": "/reactPortfolio/static/media/react-icon.7f810bcc50eb5be9eda3.png",
+    "static/media/css-icon.png": "/reactPortfolio/static/media/css-icon.6230b1e63f17e137d93c.png",
+    "static/media/restapi-icon.png": "/reactPortfolio/static/media/restapi-icon.0687be40611047cb257c.png",
     "index.html": "/reactPortfolio/index.html",
-    "main.a5dce5a5.css.map": "/reactPortfolio/static/css/main.a5dce5a5.css.map",
-    "main.72167530.js.map": "/reactPortfolio/static/js/main.72167530.js.map",
-    "496.0b8e298f.chunk.js.map": "/reactPortfolio/static/js/496.0b8e298f.chunk.js.map"
+    "main.b65b8361.css.map": "/reactPortfolio/static/css/main.b65b8361.css.map",
+    "main.543d7a1f.js.map": "/reactPortfolio/static/js/main.543d7a1f.js.map",
+    "496.48d78ca9.chunk.js.map": "/reactPortfolio/static/js/496.48d78ca9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5dce5a5.css",
-    "static/js/main.72167530.js"
+    "static/css/main.b65b8361.css",
+    "static/js/main.543d7a1f.js"
   ]
 }
