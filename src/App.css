@@ -72,7 +72,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
+  color: #ffffff;
   padding: 0.8em;
 }
 
@@ -103,14 +103,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: flex;
   flex-direction: column;
   color: #fff;
- 
+  position: fixed;
+  
 }
 
 .menu-item{
   padding-bottom: 25px;
   font-size: 25px;
   color: #fff;
-  
+  display: inline-block;
+  z-index: 3000;
 }
 
 
@@ -125,6 +127,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: #fff;
 }
 
+.navs-wrapper{
+  z-index: 10000;
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+}
+
 
 
 
@@ -132,8 +141,62 @@ Note: Beware of modifying this element as it can break the animations - you shou
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 540px) {
+  /*Nav*/
+
+  .hide{
+    display: none;
+  }
   .hidden a{
     display: none;
+  }
+
+  #nav ul li{
+    display: none;
+  }
+
+  .logo h2{
+    font-size: 19px;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateX(30%);
+  }
+
+  #nav{
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-wrapper{
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+  }
+
+
+  /*Home*/
+ .home-content{
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+ }
+
+.first-container{
+  width: 70%;
+  height: calc(100% -8rem);
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+  .subtitle{
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .title-name{
+    font-size: 50px;
+    text-align: center;
+    line-height: 4rem;
+    padding: 0;
   }
 
   .projects-box{
@@ -150,30 +213,173 @@ and (max-device-width : 540px) {
     align-items: center;
   }
 
-  #nav{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
+  .hide2{
+    display: block;
   }
 
-  .title_container{
+  .ilustration-container2{
+      width: 50%;
+      height: auto;
+  }
+
+  .ilustration2{
+    height: 100%;
     width: 100%;
-    text-align: center;
-    display: flex;
+  }
+
+  .btn-home{
+    width: 150px !important;
+  }
+
+  /*About*/
+  .purple-bubble{
+    width: 100%;
+    left: 0;
+  }
+
+  .about-wrapper{
+    left: 0;
+    width: 100%;
+    height: 210vh;
+  }
+
+   .about-container{
+    width: 100%;
+    flex-direction: column;
+    height: 40vh;
     align-items: center;
-    text-align: center;
-    padding:0;
-    margin: 0;
     
+   }
+
+   .paragraph p{
+    padding: 0;
+    font-size: 10px;
+   }
+
+   .paragraph h3{
+    padding: 8px 0;
+   }
+
+   .about-1{
+    width: 90%;
+   }
+
+   .about-2{
+    width: 90%;
+   }
+
+   .download-box{
+    width: 150px;
+    font-size: 10px;
+    margin: 15px auto;
+    padding: 3px 5px;
+   }
+
+   .process-images{
+    flex-direction: column;
+   }
+
+   
+
+   .process-item{
+    width: 100%;
+   }
+
+   .process-item h3{
+    padding: 15px 0;
+    font-size: 15px;
+   }
+
+   .process-icon{
+    width: 30%;
+    margin-top: 10px;
+   }
+
+   .marquee-background{
+    height: 50px !important;
+   }
+
+   .skill-icon{
+    height: 40px;
+    width: 40px;
+   }
+
+   .marquee-group{
+    gap: 2rem !important;
+    animation: moveTitleMobile 7s linear infinite !important;
+   }
+
+   .marquee{
+    gap: 2rem !important;
+   }
+ 
+   .flex-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+
+   .line{
+    display: block;
+   }
+
+   .project-icons{
+    border: none;
+   }
+
+   .second-title{
+    margin-top: 29px;
+   }
+
+   /* Projects*/
+   .projects-wrapper{
+    top: 290%;
+    left: 0;
+    width: 100%;
+   }
+
+   .projects-container{
+    grid-template-columns: 95%;
+    gap: 1rem;
+   }
+   
+   .projects-box{
+    height: 50vh;
+   }
+   .project-title{
+    font-size: 18px;
+   }
+
+   .projects-box{
+    flex-direction: column !important;
+   }
+
+   .img-box{
+    margin-left: 0;
+   }
+
+   .img-box img{
+    width: 90%;
+   }
+
+   .box-effect::before{
+    width: 180% !important;
+    height: 60% !important;
+   }
+
+   .linksBox a{
+    font-size: 15px;
+
+   }
+
+   .description {
+    font-size: 10px !important;
   }
 
-  .title_container h1{
-    text-align: center;
+  .technologies{
+    font-size: 9px !important;
     margin: 0 auto;
-    padding-left: 80px;
+    padding: 0;;
   }
-
 
   .projects-info h3 {
     font-size: 18px;
@@ -195,19 +401,43 @@ and (max-device-width : 540px) {
   .linksBox a{
     font-size: 15;
   }
-  .img-box{
-    align-items: baseline;
-  }
+  
+  /*Contact*/
 
   #contact{
-    width: 80%;
-    margin: 0 auto;
+   flex-direction: column;
   }
+
+  .section-title{
+    font-size: 30px !important;
+  }
+
+  .contact-box-1{
+    width: 100%;
+    height: 60% !important;
+  }
+
+  .contact-box-2{
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .box-wrapper{
+    width: 90%;
+    margin: 20px auto;
+    height: 60%;
+  }
+
+  #contact-form{
+    padding: 30px 14px;
+  }
+ #contact-form label{
+  padding: 10px 0;
+ }
+
+
  
-  
-.img-box img{
-  height: 60%;
-}
+ 
   
  .flex label{
   padding: 10px;
@@ -215,11 +445,9 @@ and (max-device-width : 540px) {
 }
 
 #contact input{
-  width: 350px;
-  height: 40px;
-  border-radius: 5px;
-  outline: none;
-  border: none;
+  width: 320px;
+  height: 20px;
+  padding: 0 5px;
  }
 
  .section-title{
@@ -232,12 +460,21 @@ and (max-device-width : 540px) {
 
 
 #contact textarea{
-  width: 350px;
+  width: 320px;
   height: 80px;
  }
 
  #footer{
     font-size: 10px;
+ }
+
+ #footer{
+    display: block;
+ }
+
+ .circle-wrapper{
+  bottom: 6% !important;
+  right: 3% !important;
  }
 
  .bm-burger-button{

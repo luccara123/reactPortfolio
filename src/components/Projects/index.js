@@ -111,7 +111,7 @@ function Projects(){
                     <div className='projects-info'>
                         <div className='project-description'>
                           
-                            <p>{project.description}</p>
+                            <p className='description'>{project.description}</p>
                             <p className='technologies'>{project.technologies}</p>
                         </div>
                         <div className="linksBox">

@@ -6,14 +6,14 @@ import Projects from './components/Projects';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About/index'
-import Footer from './components/Footer';
+
 
 
 
 function App() {
   
   return (
-      <div>
+      <div className='main-wrapper'>
         <main id="main">
         <Home></Home>
       <div className='about-wrapper'>
@@ -24,8 +24,8 @@ function App() {
             <Projects></Projects>
             <Contact></Contact>
         </div>
+       
       </main>
-     
         </div>
   );
 };

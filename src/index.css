@@ -11,11 +11,26 @@ html{
 }
 
 
+.main-wrapper{
+  position: relative;
+
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: #c5c2c2;
+  display: none;
+  margin: 10px 0;
+  padding-top: 1px;
+}
+
 
 /*Nav*/
 #nav{
@@ -42,13 +57,14 @@ html{
   cursor: pointer;
 }
 
+
+
 .nav-wrapper{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 0.1px white solid;
-  position: fixed;
   overflow: hidden;
   z-index: 1000;
   background: transparent;
@@ -195,13 +211,11 @@ html{
   padding-top: 30px;
 }
 
-
-
  .text-container span{
   color: var(--purple-font)
  }
 
- .title-container h2{
+ .subtitle{
   color: #fff;
   font-size: 15px;
   text-align: start;
@@ -211,7 +225,6 @@ html{
 color: #fff;
 text-align: center;
 }
-
 
 .title-name{
 text-align: center;
@@ -244,17 +257,14 @@ text-transform: uppercase;
 margin-top: 90px;
 }
 
-
 .description-container{
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   width: 40rem;
-  margin-top: 250px;
+  margin-top: 10px;
 }
-
-
 
 /* Space Images*/
 .rocket-img{
@@ -334,6 +344,11 @@ align-items: center;
 justify-content:end
 }
 
+.hide2{
+  display: none;
+}
+
+
 .ilustration{
 height: auto;
 width: 100%;
@@ -373,14 +388,11 @@ color: var(--purple-font) !important;
 /* Skills*/
 
 #skills{
-  
   overflow: hidden;
   text-align: center;
   color: #fff;
   margin-top: 40px;
 }
-
-
 
 .skill-icon{
   height: 100px;
@@ -422,9 +434,7 @@ color: var(--purple-font) !important;
   text-align: center;
   background-color: #fff;
   top: calc(100%);
-
 }
-
 
 #about{
   padding-top: 3rem;
@@ -433,7 +443,6 @@ color: var(--purple-font) !important;
   background: linear-gradient(#201340, #19151d);
   overflow: hidden;
   position: relative;
- 
 }
 
 .about-container{
@@ -441,7 +450,6 @@ color: var(--purple-font) !important;
   margin: 0 auto;
   height: 30vh;
   display: flex;
-  
 }
 
 .paragraph h3{
@@ -452,7 +460,6 @@ color: var(--purple-font) !important;
 
 .about-1{
   width: 50%;
-
 }
 
 .about-2{
@@ -472,7 +479,6 @@ color: var(--purple-font) !important;
   background-color: #fff
 }
 
-
 .line2{
   width: 50%;
   height: 1px;
@@ -483,7 +489,6 @@ color: var(--purple-font) !important;
   width: 1px;
   height: 100%;
   background-color: #fff;
-
 }
 
 .toTop{
@@ -505,7 +510,6 @@ color: var(--purple-font) !important;
 
 }
 
-
 .paragraph p{
   color:rgb(207, 198, 198);
   font-size: 15px;
@@ -522,7 +526,6 @@ color: var(--purple-font) !important;
   overflow: hidden;
   margin-top: 40px;
   border-bottom: 1px solid white;
-  
 }
 
 .process-images{
@@ -688,7 +691,6 @@ color: var(--purple-font) !important;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
   position: relative;
 }
 
@@ -801,25 +803,48 @@ color: var(--purple-font) !important;
 }
 
 /*Footer*/
-.footer{
+
+
+#footer{
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
-  position: absolute;
-  width: calc(20%);
-  margin: 0 auto;
   text-align: center;
-  z-index: 12 !important;
-  height: 90px;
-
-  overflow: hidden;
-  top: 90%;
-  right: 0;
-}
-
-.footer p{
+  align-items:center;
+  width: 100%;
   font-size: 10px;
+  height: 150px;
+  background-color: #333;
+  display: none;
 }
+
+.footer-item{
+  padding: 10px 0;
+  font-size: 15px;
+  color: #fff;
+}
+
+.email2{
+  background-color: var(--pink-color);
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  padding: 4px 10px;
+  border-radius: 15px;
+}
+
+.email2:hover{
+  background-color: var(--pink-hover);
+}
+
+#footer ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+/*Media Queries*/
+
+
+
+
+
 

@@ -5,10 +5,11 @@ import {useEffect} from 'react';
 import Typewriter from "typewriter-effect";
 import { Fade , JackInTheBox, Bounce , Roll, Slide } from "react-awesome-reveal";
 
+
 //components
 import Nav from '../../components/Nav'
-import Resume from '../../components/Resume/index'
 import Sidebar from "../../components/Sidebar";
+import Resume from '../../components/Resume/index'
 import SideIcons from '../../components/IconsNav';
 
 //images
@@ -74,9 +75,14 @@ function Home(){
                 }}>
 
                 {/* Nav components */}  
-                <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
-                <Nav></Nav>
-                <SideIcons></SideIcons>
+                <div className='navs-wrapper'>
+                    <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
+                    <Nav></Nav>
+                </div>
+                <div className="hide">
+                  <SideIcons></SideIcons>
+                </div>
+               
 
                  {/* Lights effect */}
                 <div className='animated-box'>
@@ -138,13 +144,16 @@ function Home(){
                         </div>
                         </Fade>
                         <Fade cascade dumping={0.2}>
-                        <div className='description-container'>
+                        <div className='description-container'>   
+                            <div className='ilustration-container2 hide2'>
+                                <img className='ilustration2 float' src={Ilustration} alt="ilustration" />
+                            </div>
                             <article className="text-container">
                                 <p className="text-content"> I am a <span>Front End Developer </span>
                                 </p>
                                 <p></p>
                             </article>
-                            <img className='saturn-img' src={saturn} alt="saturn with moons" />
+                            <img className='saturn-img hide' src={saturn} alt="saturn with moons" />
                 
                             <button class="btn-home">
                                 <Link smooth spy to="portfolio">
@@ -162,7 +171,7 @@ function Home(){
                 
                     {/*Box-2: Ilustration */}
                     <Fade>
-                    <div className='ilustration-container'>
+                    <div className='ilustration-container hide'>
                         <img className='ilustration float' src={Ilustration} alt="ilustration" />
                     </div>
                     </Fade>

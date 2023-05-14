@@ -30,9 +30,10 @@ function About(){
                             I am a self-taught web developer. I started my journey in 2020, by learning html, css and Javascript. In 2022, I graduated from University Of Toronto School Of Continuing Studies: Coding Bootcamp. During the 6 months program, I was able to learn the most known full stack technologies and apply this knowledge in lots of projects. In the three team projects we had, I was the team leader and I received great feedback from all the instructors. Since then, I've focused on learning more about front end technologies, where I've found my passion and curiosity.
                         </p>
                        
-                    </article>
+                    </article> 
                 </div>
-                <div className="line3 topTop"></div>
+                <div className="line hide"></div>
+                <div className="line3 topTop hide"></div>
                 
                 <div className="about-2">
                     <article className="paragraph">
@@ -45,18 +46,20 @@ function About(){
                     
                     </article>
                 </div>
+                <div className="line hide"></div>
                 
                
             </div>
             </Fade>
 
-            <div className="lines-box">
+            <div className="lines-box hide">
                 <div className="line1"></div>
                 <div className="line2"></div>
             </div>
                
 
-          
+          <div className="flex-reverse">
+            
             <section className="project-icons">
             <JackInTheBox direction="left" delay={300}> <h2 className="second-title">How I build projects</h2> </JackInTheBox>
 
@@ -68,28 +71,36 @@ function About(){
                             <img className='process-icon' src={creativeImage} alt="sasdas" />
                             <h3>Think Outsite The Box</h3>
                         </div>
+                        <div className="line hide"></div>
                     
                    
                     <div  className="process-item">
                         <img className='process-icon' src={toDoImage} alt="sasdas" />
                         <h3>Do Scrum Board</h3>
                     </div>
+                    <div className="line hide"></div>
                    
                     
                     <div  className="process-item">
                         <img className='process-icon' src={codeImage} alt="sasdas" />
                         <h3>Code and Debug</h3>
                     </div>
+                    <div className="line hide"></div>
+
+
                     <div  className="process-item">
                         <img className='process-icon' src={launchImage} alt="sasdas" />
                         <h3>Launch</h3>
                     </div>
+                    <div className="line hide"></div>
                     
                 </div></Fade>
                 
             </section>
             
+            
              <Skills></Skills>
+             </div>
 
         </section>
         

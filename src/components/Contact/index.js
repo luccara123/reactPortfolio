@@ -6,14 +6,13 @@ import contactAvatar from '../../purpleIcons/Copy Writing.png';
 import bgContact from '../../images/stars-bg.jpg';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import { Fade , JackInTheBox, Bounce , Roll } from "react-awesome-reveal";
-
+import Footer from '../Footer/index';
 
 function Contact() {
-
     const SERVICE_ID = "service_0a0c3f7";
     const TEMPLATE_ID = "template_htesw4c";
     const USER_ID = "eFQQeKMwMk6NG4cRI";
-    
+
     const [isBlank, setIsBlank] = useState(false)
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
     const { name, email, message } = formState;
@@ -51,19 +50,16 @@ function Contact() {
         }
     }
 
-    function formStateTrue () {
-        const name = formState.name;
-        const email = formState.email;
-        const message = formState.message;
-        if(name && message && email === ''){
-            setIsBlank(true);
-        } else{
-            setIsBlank(false); 
-        }       
-    }
-    
-    function handleSubmit(event) {
+    function validade (event){
         event.preventDefault();
+       if(isEmailValidaded && isNameValidaded && isMessageValidaded){
+         handleSubmit(event)
+       } else{
+        setErrorMessage('Please fill out the required information'); 
+       }
+    }
+
+    function handleSubmit(event) {
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, event.target, USER_ID)
       .then((result) => {
         console.log(result.text);
@@ -79,12 +75,9 @@ function Contact() {
               title: 'Ooops, something went wrong',
             })
           });
-          formStateTrue ()  
     }
 
-    function errorWarning (){
-       setErrorMessage('Please fill out the information proparly.')
-    }
+   
     return (
         <div className='contact-wrapper'  style={{
             backgroundImage: `url(${bgContact})`,
@@ -101,7 +94,7 @@ function Contact() {
                     <div className='box-wrapper'>
                         <div>
                     <Fade delay={200}><h2 className="glowText section-title">Contact me</h2></Fade>
-                    <form id="contact-form" onSubmit={ isBlank || isEmailValidaded && isNameValidaded && isMessageValidaded  ? handleSubmit : errorWarning }>
+                    <form id="contact-form" onSubmit={validade}>
                     <div className="flex">
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
@@ -139,7 +132,7 @@ function Contact() {
             
         </section>
         </Fade>
-       <div className='footer'>
+      
        <Link  smooth spy to="home">
        <div className='circle-wrapper'>
                 <div className='whiteCircle'>
@@ -152,9 +145,9 @@ function Contact() {
                     </div>
                 </div>   
              </Link>
-       </div>
+             <Footer></Footer>
         </div>
-       
+   
     );
 };
 

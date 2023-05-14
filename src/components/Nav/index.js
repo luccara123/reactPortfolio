@@ -58,7 +58,7 @@ const Nav = () => {
                 
                 ))
             }
-            <li className="hidden email"><a href="mailto:lucca.ara7@gmail.com">lucca.ara7@gmail.com</a></li>
+            <li className=" hide email"><a className="hide" href="mailto:lucca.ara7@gmail.com">lucca.ara7@gmail.com</a></li>
           </ul>
         </nav>
     </div>
