@@ -536,6 +536,7 @@ color: var(--purple-font) !important;
   justify-content: space-around;
   width: 100%;
   padding-bottom: 20px;
+  flex-shrink: 1;
 }
 
 .process-item{

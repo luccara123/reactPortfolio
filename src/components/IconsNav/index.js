@@ -17,7 +17,7 @@ const SideIcons = () => {
         <ul>
           <li className="icon"> <a href="https://www.linkedin.com/in/lucca-araujo-aa1055245/" target="blank">{linkedinIcon}</a></li>
           <li className="icon"><a href="https://github.com/luccara123" target="blank">{githubIcon}</a></li>
-          <li className="icon"><a href="#" target="blank">{instagramIcon}</a></li>
+          <li className="icon"><a href="https://instagram.com/luccawebdev?igshid=OGQ5ZDc2ODk2ZA==" target="blank">{instagramIcon}</a></li>
         </ul>
       </nav>
     )

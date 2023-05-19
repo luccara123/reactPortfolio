@@ -4,8 +4,8 @@ import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 import contactAvatar from '../../purpleIcons/Copy Writing.png';
 import bgContact from '../../images/stars-bg.jpg';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
-import { Fade , JackInTheBox, Bounce , Roll } from "react-awesome-reveal";
+import { Link, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Fade } from "react-awesome-reveal";
 import Footer from '../Footer/index';
 
 function Contact() {

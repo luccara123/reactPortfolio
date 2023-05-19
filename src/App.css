@@ -139,7 +139,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /*Media queries  ----------MOBILE----------*/
 @media only screen 
-and (min-device-width : 320px) 
+and (min-device-width : 280px) 
 and (max-device-width : 540px) {
   /*Nav*/
 
@@ -336,6 +336,10 @@ and (max-device-width : 540px) {
     margin-top: 29px;
    }
 
+   .project-icons{
+    border-bottom: none !important;
+   }
+
    /* Projects*/
    .projects-wrapper{
     top: 290%;
@@ -441,10 +445,6 @@ and (max-device-width : 540px) {
   padding: 10px 0;
  }
 
-
- 
- 
-  
  .flex label{
   padding: 10px;
   font-size: 15px;;
@@ -491,7 +491,210 @@ and (max-device-width : 540px) {
   display: inline-block;
   color: #fff;
 }
+}
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 540px) {
+  
+}
+
+/* Ipads, Tablets */
+
+@media only screen 
+and (min-device-width : 541px) 
+and (max-device-width : 1200px) {
+   
+ .hide{
+  display: none;
+ }
+
+ .email{
+  display: none !important;
+ }
+
+ /*Nav*/
+ #nav{
+  width: 100%;
+ }
+
+ /*Home*/
+ .home-content{
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+ }
+
+ .first-container{
+  width: 70%;
+  height: calc(100% -8rem);
+  margin: 0 auto;
+  padding-left: 0;
+  padding-top: 50px;
+}
+
+ .subtitle{
+  font-size: 19px;
+  text-align: center;
+}
+
+.title-name{
+  font-size: 70px;
+}
+ .hide2{
+  display: block;
+ }
+
+ .ilustration-container2{
+  width: 70%;
+  height: auto;
+}
+
+.ilustration2{
+height: 100%;
+width: 100%;
+}
+
+.nav-2{
+  display: none;
+}
+
+.btn-home{
+  
+  margin-top: 30px !important;
+}
+
+.text-content{
+  font-size: 19px;
+}
+
+/* About*/
+.purple-bubble{
+  width: 100%;
+  left: 0;
+}
+
+.about-wrapper{
+  left: 0;
+  width: 100%;
+  height: 210vh;
+}
+
+ .about-container{
+  width: 100%;
+  flex-direction: column;
+  height: 40vh;
+  align-items: center;
+ }
+  .about-1{
+    width: 80%;
+   }
+
+   .about-2{
+    width: 80%;
+   }
+
+   .process-images{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .process-item{
+    width: 100%;
+    margin: 50px 0
+   }
+
+   .process-item h3{
+    padding-top: 10px;
+   }
+
+   .project-icons{
+    border-bottom: none !important;
+   }
+
+   
+   .flex-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+   
+   /*Projects*/
+   .projects-wrapper{
+    top: 240%;
+    left: 0;
+    width: 100%;
+   }
+
+   .projects-container{
+    grid-template-columns: 90%;
+    gap: 1rem;
+   }
+
+   .projects-box{
+    height: 65vh;
+   }
+
+   .box-effect::before{
+    width: 180% !important;
+    height: 70% !important;
+   }
+
+   /*Contact*/
+   #contact{
+    flex-direction: column;
+   }
+ 
+   .contact-box-1{
+    width: 100%;
+    height: 60% !important;
+  }
+
+  .contact-box-2{
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  #footer{
+    font-size: 20px;
+ }
+
+ #footer{
+    display: block;
+ }
+
+ .circle-wrapper{
+  bottom: 4% !important;
+  right: 3% !important;
+ }
+
+ 
 
 }
 
 
+@media only screen 
+and (min-device-width : 541px) 
+and (max-device-width : 768px) {
+
+  /*Home*/
+.subtitle{
+  font-size: 15px;
+}
+
+.title-name{
+  font-size: 70px;
+}
+
+.text-content{
+  font-size: 15px;
+}
+
+  .ilustration-container2{
+    width: 70%;
+    height: auto;
+  }
+}

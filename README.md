@@ -1,10 +1,10 @@
 ## Portfolio
 
-Personal Portfolio with my web development projects. This application has 4 pages, about me, portfolio, contact and resume. In the portfolio page, there are six projects with different technologies.
+Personal Portfolio with my web development projects.
 
 # Technologies
 
-Html, Css, Javascript and React.
+Html, Css, Javascript and React
 
 
 # Installation
@@ -12,7 +12,6 @@ Html, Css, Javascript and React.
 In order to install this application, use the command git clone followed by the repo link, in the command-line.
 
 # Usage 
-
 Use the command npm start, to run the application.
 
 # Live Website
